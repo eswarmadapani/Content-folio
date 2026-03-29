@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eswar — Hero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Great+Vibes&family=Outfit:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  max-width: 80%;
+}
+
+.hero-name, .hero-sub {
+  opacity: 0;
+  transform: translateY(60px);
+}
+.hero-name {
+  animation: slideUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+}
+.hero-sub {
+  font-size: clamp(20px, 2.8vw, 34px) !important;
+  line-height: 1.35;
+  max-width: 500px;
+  animation: slideUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards;
+}
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-actions {
+  margin-top: 2.2rem;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: slideUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.9s forwards;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  text-decoration: none;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  padding: 16px 36px;
+  border-radius: 2px;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  background: transparent;
+}
+
+.hero-btn:hover {
+  background: #c9a84c;
+  color: #080808;
+  box-shadow: 0 0 50px rgba(201, 168, 76, 0.25);
+  transform: translateY(-2px);
+}
+
+.arrow-line {
+  height: 1px;
+  width: 20px;
+  background: currentColor;
+  opacity: 0.6;
+}
+</style>
+</head>
+<body>
+<div id="tubes-background" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; overflow: hidden;">
+  <canvas id="tubes-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></canvas>
+</div>
+
+<nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(8,8,8,0.95); backdrop-filter: blur(16px);">
+  <a href="hero.html" class="nav-logo">Eswar</a>
+  <div class="nav-links">
+    <a href="about.html" class="link">About</a>
+    <a href="whatido.html" class="link">Work</a>
+    <a href="services.html" class="link">Services</a>
+    <a href="contact.html" class="link mobile-only">Contact</a>
+  </div>
+    <div class="nav-cta-wrapper">
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle Navigation">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </nav>
+
+<section id="hero" style="position: relative; z-index: 100; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 64px;">
+  <div class="hero-content">
+    <div class="hero-name">Eswar</div>
+    <div class="hero-sub">Crafting frames that feel.</div>
+    <div class="hero-actions" style="margin-top: 2.2rem;">
+      <a href="about.html" class="hero-btn">
+        About Me
+        <span class="arrow-line"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<script type="module">
+const canvas = document.getElementById('tubes-canvas');
+const container = document.getElementById('tubes-background');
+
+(async () => {
+  try {
+    const module = await import('https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js');
+    const TubesCursor = module.default;
+    
+    const app = TubesCursor(canvas, {
+      tubes: {
+        colors: ['#c9a84c', '#e8c97a', '#101010'],
+        lights: {
+          intensity: 150,
+          colors: ['#c9a84c', '#ede9e0', '#6b6760']
+        }
+      }
+    });
+
+    const resize = () => {
+      canvas.width = container.clientWidth;
+      canvas.height = container.clientHeight;
+    };
+    window.addEventListener('resize', resize);
+    resize();
+
+    container.addEventListener('click', () => {
+      const goldColors = ['#c9a84c', '#e8c97a', '#101010', '#080808'];
+      app.tubes.setColors(goldColors.sort(() => Math.random() - 0.5));
+    });
+
+    console.log('✅ Hero content perfectly centered');
+  } catch (error) {
+    console.error('Shader failed:', error);
+    canvas.style.background = 'radial-gradient(circle at 50% 50%, rgba(201,168,76,0.1) 0%, transparent 70%)';
+  }
+})();
+</script>
+</body>
+</html>
+

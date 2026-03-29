@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eswar — About</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Great+Vibes&family=Outfit:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Shader container for about-specific effects -->
+<div id="shader-about" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;"></div>
+
+<nav>
+  <a href="hero.html" class="nav-logo">Eswar</a>
+  <div class="nav-links">
+    <a href="about.html" class="link">About</a>
+    <a href="whatido.html" class="link">Work</a>
+    <a href="services.html" class="link">Services</a>
+    <a href="contact.html" class="link mobile-only">Contact</a>
+  </div>
+  <div class="nav-cta-wrapper">
+    <a href="contact.html" class="nav-cta">Contact</a>
+  </div>
+  <button class="nav-toggle" aria-label="Toggle Navigation">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+</nav>
+
+<section id="about" class="section-wrap">
+  <div class="orb" style="width:500px;height:500px;top:-120px;right:-80px;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 65%);"></div>
+  <div class="section-tag reveal">
+    <span class="tag-num">01</span>
+    <span class="tag-line"></span>
+    <span class="tag-label">About Me</span>
+  </div>
+  <div class="about-grid">
+    <div class="reveal d1">
+      <span class="about-name-script">Eswar</span>
+      <div class="about-tagline">
+        <span class="tl-dot"></span>
+        <span class="tl-text">Video Editor</span>
+        <span class="tl-dot"></span>
+        <span class="tl-text">Content Creator</span>
+        <span class="tl-dot"></span>
+        <span class="tl-text">Storyteller</span>
+      </div>
+      <p class="about-bio">
+        I believe every frame holds a universe. My work lives at the intersection of
+        <em>cinematic craft</em> and raw emotion — where a single cut can change everything.
+        <br><br>
+        From short-form reels to long-form narratives, I build stories that don't just play —
+        they <em>stay</em>.
+      </p>
+    </div>
+    
+    <div class="about-photo-wrap reveal d2">
+      <div class="photo-frame">
+        <span class="corner tl"></span>
+        <span class="corner tr"></span>
+        <span class="corner bl"></span>
+        <span class="corner br"></span>
+        <img src="img/about-me.jpg.webp" alt="Eswar" class="photo-img">
+      </div>
+      <div class="about-float-badge">
+        <span class="badge-num">4+</span>
+        <span class="badge-label">Years Editing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="ft">© 2026 <span class="ft-script">Eswar</span></span>
+  <span class="ft" style="color:var(--muted2);">Storyteller &amp; Editor</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+

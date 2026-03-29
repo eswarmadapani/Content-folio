@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eswar — Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Great+Vibes&family=Outfit:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<!-- Shader container for services-specific effects -->
+<div id="shader-services" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;"></div>
+</head>
+<body>
+<nav>
+  <a href="hero.html" class="nav-logo">Eswar</a>
+  <div class="nav-links">
+    <a href="about.html" class="link">About</a>
+    <a href="whatido.html" class="link">Work</a>
+    <a href="services.html" class="link">Services</a>
+    <a href="contact.html" class="link mobile-only">Contact</a>
+  </div>
+  <div class="nav-cta-wrapper">
+    <a href="contact.html" class="nav-cta">Contact</a>
+  </div>
+  <button class="nav-toggle" aria-label="Toggle Navigation">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+</nav>
+
+<div class="divider"></div>
+
+<section id="services" class="section-wrap">
+  <div class="section-tag reveal">
+    <span class="tag-num">03</span>
+    <span class="tag-line"></span>
+    <span class="tag-label">Services</span>
+  </div>
+  <h2 class="section-heading reveal d1">What I <span class="hl">Offer</span></h2>
+  <div class="services-grid">
+    <div class="service-card reveal d1">
+      <div class="svc-num">— 01</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+      </div>
+      <div class="svc-title">Short-form Reels Editing</div>
+      <p class="svc-desc">High-retention vertical content built for Instagram &amp; YouTube Shorts. Hook, story, CTA — engineered to perform.</p>
+    </div>
+    <div class="service-card reveal d2">
+      <div class="svc-num">— 02</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+      </div>
+      <div class="svc-title">Cinematic Storytelling</div>
+      <p class="svc-desc">Purposeful pacing, colour grading, and sound design that evoke deep emotion and lasting impression.</p>
+    </div>
+    <div class="service-card reveal d3">
+      <div class="svc-num">— 03</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      </div>
+      <div class="svc-title">Content Strategy &amp; Creation</div>
+      <p class="svc-desc">End-to-end production — concept, scripting, and delivery for brands and creators who demand originality.</p>
+    </div>
+  </div>
+
+  <div class="work-head reveal">
+    <div class="work-title">My <span style="font-family:var(--script);color:var(--gold);font-style:normal;font-size:1.2em;">Work</span></div>
+    <span class="work-sub">Selected Projects</span>
+  </div>
+  <div class="work-grid">
+    <div class="work-thumb reveal d1"><div class="play-ring"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div><span class="thumb-label">Reel Edit · 2025</span></div>
+    <div class="work-thumb reveal d2"><div class="play-ring"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div><span class="thumb-label">Cinematic · 2025</span></div>
+    <div class="work-thumb reveal d3"><div class="play-ring"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div><span class="thumb-label">Brand Film · 2024</span></div>
+    <div class="work-thumb reveal d4"><div class="play-ring"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div><span class="thumb-label">Short-form · 2024</span></div>
+  </div>
+</section>
+
+<footer>
+  <span class="ft">© 2026 <span class="ft-script">Eswar</span></span>
+  <span class="ft" style="color:var(--muted2);">Storyteller &amp; Editor</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+

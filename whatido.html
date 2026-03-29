@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eswar — What I Do</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Great+Vibes&family=Outfit:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<!-- Shader container for whatido-specific effects -->
+<div id="shader-whatido" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;"></div>
+</head>
+<body>
+<nav>
+  <a href="hero.html" class="nav-logo">Eswar</a>
+  <div class="nav-links">
+    <a href="about.html" class="link">About</a>
+    <a href="whatido.html" class="link">Work</a>
+    <a href="services.html" class="link">Services</a>
+    <a href="contact.html" class="link mobile-only">Contact</a>
+  </div>
+  <div class="nav-cta-wrapper">
+    <a href="contact.html" class="nav-cta">Contact</a>
+  </div>
+  <button class="nav-toggle" aria-label="Toggle Navigation">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+</nav>
+
+<div class="divider"></div>
+
+<section id="whatido" class="section-wrap">
+  <div class="section-tag reveal">
+    <span class="tag-num">02</span>
+    <span class="tag-line"></span>
+    <span class="tag-label">Presence</span>
+  </div>
+  <h2 class="section-heading reveal d1">What I <span class="hl">Do</span></h2>
+  <div class="whatido-grid">
+    <div class="portrait-card reveal d2">
+      <span class="corner tl"></span>
+      <span class="corner tr"></span>
+      <span class="corner bl"></span>
+      <span class="corner br"></span>
+      <img src="img/portrait-work.jpg.jpg" alt="Work" class="photo-img">
+    </div>
+
+    <div class="insta-card reveal d3">
+      <div class="insta-profile">
+        <div class="avatar-ring">
+          <div class="avatar-inner">
+            <img src="img/about-me.jpg.webp" alt="Eswar" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+        </div>
+        <div>
+          <div class="insta-handle">@eswar</div>
+          <div class="insta-sub">Content Creator · Video Editor</div>
+        </div>
+      </div>
+      <div class="insta-stats">
+        <div class="stat-item"><span class="stat-num" id="followers">0</span><span class="stat-label">Followers</span></div>
+      </div>
+      <p class="insta-footer">Crafting cinematic reels &amp; visual stories that captivate a growing audience across platforms.</p>
+      <div class="insta-about reveal d4" style="padding-top: 15px; border-top: 1px solid rgba(201,168,76,0.06); margin-top: 20px;">
+        <p style="font-size: 14px; color: var(--muted2); font-weight: 300; line-height: 1.8; margin: 0;">
+          I specialize in creating high-energy, narrative-driven vertical content that helps creators connect with their audience at scale.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="ft">© 2026 <span class="ft-script">Eswar</span></span>
+  <span class="ft" style="color:var(--muted2);">Storyteller &amp; Editor</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
