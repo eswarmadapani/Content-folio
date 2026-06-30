@@ -25,7 +25,7 @@ const cObs = new IntersectionObserver((entries) => {
     if (e.isIntersecting && !countered.done) {
       countered.done = true;
       const followersEl = document.getElementById('followers');
-      if (followersEl) animCount(followersEl, 13000, v => v >= 1000 ? (v/1000).toFixed(1)+'K+' : Math.floor(v)+'', 1800);
+      if (followersEl) animCount(followersEl, 15800, v => v >= 1000 ? (v/1000).toFixed(1)+'K+' : Math.floor(v)+'', 1800);
     }
   });
 }, { threshold: 0.1 });
@@ -211,4 +211,34 @@ if (navToggle && navLinks) {
     });
   });
 }
+
+/* ─── HOVER VIDEOS PLAYBACK ─── */
+const workThumbs = document.querySelectorAll('.work-thumb');
+workThumbs.forEach(thumb => {
+  const video = thumb.querySelector('video');
+  const audioBtn = thumb.querySelector('.audio-toggle');
+  
+  if (video) {
+    thumb.addEventListener('mouseenter', () => {
+      video.play().catch(err => console.log("Video play interrupted or blocked: ", err));
+    });
+    thumb.addEventListener('mouseleave', () => {
+      video.pause();
+    });
+    
+    if (audioBtn) {
+      audioBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        video.muted = !video.muted;
+        if (video.muted) {
+          audioBtn.classList.remove('unmuted');
+        } else {
+          audioBtn.classList.add('unmuted');
+        }
+      });
+    }
+  }
+});
+
 
